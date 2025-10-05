@@ -77,7 +77,7 @@ Your SafetySnap application is **production-ready** and meets all hackathon requ
 
 **Live URLs** (update after deployment):
 - **Frontend**: https://your-app.vercel.app
-- **Backend**: https://your-api.railway.app
+- **Backend**: 🚀 DEPLOYING on Railway...
 - **GitHub**: https://github.com/Madhavarora05/SafetySnap ✅
 
 **Key Features Implemented**:
