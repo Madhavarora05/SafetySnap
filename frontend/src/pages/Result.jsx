@@ -97,10 +97,10 @@ function Result() {
 
     img.onerror = () => {
       console.error('Failed to load image for canvas drawing');
-      console.error('Image path:', `http://localhost:3001/uploads/${imageData.filename}`);
+      console.error('Image path:', `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/uploads/${imageData.filename}`);
     };
 
-    img.src = `http://localhost:3001/uploads/${imageData.filename}`;
+    img.src = `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/uploads/${imageData.filename}`;
   };
 
   if (loading) {

@@ -128,11 +128,11 @@ function History() {
               <div key={image.id} className="image-card">
                 <Link to={`/result/${image.id}`}>
                   <img
-                    src={`http://localhost:3001/uploads/${image.filename}`}
+                    src={`${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/uploads/${image.filename}`}
                     alt={image.filename}
                     className="thumbnail"
                     onError={(e) => {
-                      console.error('Failed to load thumbnail:', `http://localhost:3001/uploads/${image.filename}`);
+                      console.error('Failed to load thumbnail:', `${import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:3001'}/uploads/${image.filename}`);
                       e.target.style.display = 'none';
                     }}
                   />

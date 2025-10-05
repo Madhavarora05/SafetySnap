@@ -54,7 +54,8 @@ function Analytics() {
       // Process each image to gather statistics
       for (const image of images) {
         // Fetch detailed detection data for each image
-        const response = await fetch(`http://localhost:3001/api/images/${image.id}`);
+        const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+        const response = await fetch(`${API_BASE}/images/${image.id}`);
         const imageData = await response.json();
 
         const hasHelmet = imageData.detections.some(d => d.label === 'helmet');
